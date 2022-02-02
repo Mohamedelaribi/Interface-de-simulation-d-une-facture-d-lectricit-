@@ -11,8 +11,8 @@
     $Ancien = $_POST["IndexAncien"];
     $Nouveau = $_POST["IndexNouveau"];
     $Consommation = $Nouveau - $Ancien;
-    $SousTotal2 = $TotalTVA + 0.45;
-    $TotalElectricite = $SousTotal2 +$SousTotal;
+
+    
     
     ?>
 <!DOCTYPE html>
@@ -120,6 +120,7 @@
             $MontantHT = $Consommation * $Tarif3;
             $MontantTaxes = $MontantHT * $TauxTVA;
             $SousTotal = $MontantHT;
+            $TotalTVA = $MontantTaxes;
             echo "<tr> 
             <td> TRANCHE 3</td>
             <td>$Consommation</td>
@@ -134,6 +135,7 @@
             $MontantHT = $Consommation * $Tarif4;
             $MontantTaxes = $MontantHT * $TauxTVA;
             $SousTotal = $MontantHT;
+            $TotalTVA = $MontantTaxes;
 
             echo "<tr> 
             <td> TRANCHE 4</td>
@@ -150,6 +152,7 @@
             $MontantHT = $Consommation * $Tarif5;
             $MontantTaxes = $MontantHT * $TauxTVA;
             $SousTotal = $MontantHT;
+            $TotalTVA = $MontantTaxes;
             echo "<tr> 
             <td> TRANCHE 5</td>
             <td>$Consommation</td>
@@ -165,6 +168,7 @@
             $MontantHT = $Consommation * $Tarif6;
             $MontantTaxes = $MontantHT * $TauxTVA;
             $SousTotal = $MontantHT;
+            $TotalTVA = $MontantTaxes;
             echo "<tr> 
             <td> TRANCHE 6</td>
             <td>$Consommation</td>
@@ -225,7 +229,7 @@
         <td></td>
         <td></td>
         <td></td>
-        <td><?php echo  $TotalTVA + $MontantTVA;?></td>
+        <td><?php echo $TootalTva= $TotalTVA + $MontantTVA;?></td>
         <td>مجموع ض.ق.م</td>
     </tr>
     <tr>
@@ -241,15 +245,15 @@
         <td>Sous-Total</td>
         <td></td>
         <td></td>
-        <td><?php echo $SousTotal +$Tarif ;?></td>
+        <td><?php echo $SOOSTOTAL = $SousTotal +$Tarif ;?></td>
         <td></td>
-        <td><?php echo $SousTotal2;?></td>
+        <td><?php echo $SousTotal2 = $TootalTva + 0.45;?></td>
     </tr>
     <tr>
         <td>TOTAL ÉLECTRICITÉ</td>
         <td></td>
         <td></td>
-        <td><?php echo $TotalElectricite;?></td>
+        <td><?php echo $TotalElectricite = $SOOSTOTAL + $SousTotal2;?></td>
     </tr>
 
 
