@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Solicode"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-01 11:22:49 "/>
+        <attribute name="created" value="U29saWNvZGU7REVTS1RPUC03NUM2NjVROzIwMjItMDEtMjg7MTI6MTI6MTAgUE07MzA4Ng=="/>
+        <attribute name="edited" value="U29saWNvZGU7REVTS1RPUC03NUM2NjVROzIwMjItMDEtMjg7MDU6MDM6MzggUE07MTQ7MzI1OA=="/>
+        <attribute name="edited" value="c29saWNvZGU7REVTS1RPUC1LSkxWMlM0OzIwMjItMDItMDE7IjExOjIyOjQ5ICI7MjszMjIx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <declare name="MHT" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <assign variable="c" expression="a-b"/>
+            <output expression="c" newline="True"/>
+            <if expression="c &lt;=150">
+                <then>
+                    <if expression="c&lt;=100">
+                        <then>
+                            <assign variable="MHT" expression="c*0.794"/>
+                            <output expression="MHT" newline="True"/>
+                            <declare name="MTAXES" type="Integer" array="False" size=""/>
+                            <assign variable="MTAXES" expression="MHT*0.14"/>
+                            <output expression="MTAXES" newline="True"/>
+                        </then>
+                        <else>
+                            <declare name="MHT1" type="Real" array="False" size=""/>
+                            <declare name="MHT2" type="Real" array="False" size=""/>
+                            <assign variable="MHT1" expression="100*0.794"/>
+                            <assign variable="MHT2" expression="(c-100)*0.883"/>
+                            <output expression="MHT1" newline="True"/>
+                            <output expression="MHT2" newline="True"/>
+                            <declare name="MTAXES1" type="Real" array="False" size=""/>
+                            <declare name="MTAXES2" type="Real" array="False" size=""/>
+                            <assign variable="MTAXES1" expression="MHT1*0.14"/>
+                            <assign variable="MTAXES2" expression="MHT2*0.14"/>
+                            <output expression="MTAXES1" newline="True"/>
+                            <output expression="MTAXES2" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="c&gt;=151 &amp;&amp; c&lt;=210">
+                        <then>
+                            <assign variable="MHT" expression="c*0.9451"/>
+                            <output expression="MHT" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="c&gt;=211 &amp;&amp; c&lt;=310">
+                                <then>
+                                    <assign variable="MHT" expression="c*1.0489"/>
+                                    <output expression="MHT" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="c&gt;= 311 &amp;&amp; c&lt;= 510">
+                                        <then>
+                                            <assign variable="MHT" expression="c*1.2915"/>
+                                            <output expression="MHT" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="c &gt;= 511">
+                                                <then>
+                                                    <assign variable="MHT" expression="c*1.4975"/>
+                                                    <output expression="MHT" newline="True"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <declare name="MTAXES" type="Real" array="False" size=""/>
+                    <assign variable="MTAXES" expression="MHT*0.14"/>
+                    <output expression="MTAXES" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
