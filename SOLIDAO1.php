@@ -10,11 +10,14 @@
 <body>
     <h1>المكتب الوطني للكهرباء و الماء الصالح للشرب</h1>
     <h2>Office National de l'Electricité Et d'Eau Potable</h2>
-    <form action="Solidao.php" method="post">
+    <form id="form" action="SOLIDAO.php" method="post">
+        <div id="form">
         <label for="IndexAncien">Entre l'Ancien valeur:</label>
         <input type="text" name="IndexAncien" id="IndexAncien">
         <label for="IndexNouveau">Entre le Nouveau valeur:</label>
         <input type="text" name="IndexNouveau" id="IndexNouveau"><br>
+        </div>
+
         
         <select id="select" name="Calibre">
             <option disabled selected hidden value >type de Calibre</option>

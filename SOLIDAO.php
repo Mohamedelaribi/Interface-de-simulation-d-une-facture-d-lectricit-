@@ -21,13 +21,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
             <table class="lydec_table" id="lydec_table">
-            <tr id="tr1">
+            <tr id="tr1" colspan="3">
                 <td id="td1"><span>Ancien index :</span> <b><?php echo $Ancien; ?></b></td>
                 <td id="td1"><span>Nouveau index :</span> <b><?php echo $Nouveau; ?></b></td>
                 <td id="td1"><span>Consommation :</span> <b><?php echo $Consommation . ' Kwh'; ?></b></td>
@@ -35,17 +35,17 @@
             <tr>
                 <td colspan="3">
                     <table class="detail_table">
-                        <tr>
-                            <th></th>
+                        <tr colspan="3">
+                            <th colspan="3"></th>
                             <th>مفوتر <br>Facturé</th>
                             <th>س.و <br>P.U</th>
                             <th>المبلغ د.إ.ر <br>Montant HT</th>
                             <th>ص.ق.م <br>taux TVA</th>
                             <th>مبلغ الرسوم <br>Montant Taxes</th>
                             <th></th>
-                        <tr>
-                        <tr id = "tr">
-                            <td><b>CONSOMMATION ELECTRICITE</b></td>
+                        <tr colspan="3">
+                        <tr id = "tr" colspan="3">
+                            <td colspan="3"><b>CONSOMMATION ELECTRICITE</b></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -69,7 +69,7 @@
             $TotalTVA = $MontantTaxes;
             $SousTotal = $MontantHT;
             
-            echo "<tr> 
+            echo "<tr colspan='3'> 
             <td> TRANCHE 1</td>
             <td>$Consommation</td>
             <td>$Tarif1</td>
@@ -95,7 +95,7 @@
             $MontantTaxes2 = $MontantHT2 * $TauxTVA;
             $TotalTVA = $MontantTaxes1 + $MontantTaxes2;
             $SousTotal = $MontantHT1 +$MontantHT2;
-            echo "<tr> 
+            echo "<tr colspan='3'> 
             <td> TRANCHE 1</td>
             <td>100</td>
             <td>$Tarif1</td>

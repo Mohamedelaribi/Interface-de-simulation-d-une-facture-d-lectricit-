@@ -57,11 +57,10 @@ h2{
     text-align: center; 
 
 }
-strong{
-    color: #E30D1C;
-}
-form{
+#form{
+    border: 1px solid #E30D1C;
     text-align: center;
+    display: flex;
 }
 #nv{
     margin-top: 10px;
@@ -84,12 +83,13 @@ form{
     border-radius: 5px;
 }
 
-#tr1{
+tr{
     border: black;
     border: solid;
-    text-align: center;
+
 }
 #td1{
     border: black;
     border: solid;
 }
+
